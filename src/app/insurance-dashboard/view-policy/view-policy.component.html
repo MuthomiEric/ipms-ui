@@ -1,0 +1,17 @@
+<div *ngIf="policy; else loading" class="policy-details">
+    <h2>Policy Details</h2>
+    <div class="policy-detail">
+      <p><strong>Policy Holder Name:</strong> {{ policy?.policyHolderName }}</p>
+      <p><strong>Policy Number:</strong> {{ policy?.policyNumber }}</p>
+      <p><strong>Premium Amount:</strong> {{ policy.premium | currency:'KES' }}</p>
+      <p><strong>Start Date:</strong> {{ policy?.startDate }}</p>
+      <p><strong>End Date:</strong> {{ policy?.endDate }}</p>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <div class="loading-spinner">Loading policy details...</div>
+  </ng-template>
+  
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  

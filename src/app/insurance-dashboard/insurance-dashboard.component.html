@@ -1,0 +1,61 @@
+<div class="dashboard-container">
+  <h1>Insurance Policies Dashboard</h1>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="isLoading" class="loading-spinner"></div>
+
+  <!-- Policy Table -->
+  <div class="table-container">
+    <table *ngIf="!isLoading">
+      <thead>
+        <tr>
+          <th>Policy Number</th>
+          <th>Policy Holder</th>
+          <th>Premium Amount</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let policy of policies">
+          <td>{{ policy.policyNumber }}</td>
+          <td>{{ policy.policyHolderName }}</td>
+          <td>{{ policy.premium | currency:'KES' }}</td>
+          <td>{{ policy.startDate }}</td>
+          <td>{{ policy.endDate }}</td>
+          <td>
+            <button (click)="onEditPolicy(policy.id)">Edit</button>
+            <button (click)="onDeletePolicy(policy.id)">Delete</button>
+            <button (click)="onViewPolicy(policy.id)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  <!-- Pagination -->
+<div *ngIf="!isLoading && policies.length > 0" class="pagination">
+  <button 
+    (click)="pageNumber = pageNumber - 1; onChange()"
+    [disabled]="pageNumber <= 1">
+    Previous
+  </button>
+  
+  <button 
+    (click)="pageNumber = pageNumber + 1; onChange()"
+    [disabled]="pageNumber >= totalPages">
+    Next
+  </button>
+</div>
+
+  <div class="create-policy">
+    <button (click)="onCreatePolicy()">Create New Policy</button>
+  </div>
+</div>

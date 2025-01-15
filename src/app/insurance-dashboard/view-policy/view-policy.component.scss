@@ -1,0 +1,82 @@
+
+.policy-details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  
+  .policy-detail p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .policy-detail strong {
+    color: #333;
+  }
+  
+  .policy-details h2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #d9534f;
+    background-color: #f8d7da;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .error-message p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .policy-detail p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .policy-detail strong {
+    font-weight: 600;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .policy-details {
+      padding: 15px;
+    }
+  
+    .policy-detail p {
+      font-size: 14px;
+    }
+  
+    .policy-details h2 {
+      font-size: 20px;
+    }
+  }
+  

@@ -1,0 +1,5 @@
+<nav class="navbar">
+  <a *ngIf="!isLoggedIn" (click)="navigateTo('/login')">Login</a>
+  <a *ngIf="!isLoggedIn" (click)="navigateTo('/register')">Register</a>
+  <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+</nav>

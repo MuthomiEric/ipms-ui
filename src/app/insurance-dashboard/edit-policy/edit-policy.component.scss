@@ -1,0 +1,84 @@
+.edit-policy-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading Style */
+  .edit-policy-container h2 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Button Style */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+  
+  /* Loading Spinner */
+  .loading-spinner {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #d9534f;
+    background-color: #f8d7da;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .edit-policy-container {
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

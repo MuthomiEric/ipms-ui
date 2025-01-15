@@ -1,0 +1,43 @@
+<div class="edit-policy-container">
+    <h2>Edit Policy</h2>
+  
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+  
+    <div class="form-container" *ngIf="!isLoading && policy">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="policyHolderName">Policy Holder Name</label>
+          <input
+            type="text"
+            id="policyHolderName"
+            [(ngModel)]="policy.policyHolderName"
+            name="policyHolderName"
+            required
+          />
+        </div>
+          
+        <div class="form-group">
+          <label for="premium">Premium</label>
+          <input
+            type="number"
+            id="premium"
+            [(ngModel)]="policy.premium"
+            name="premium"
+            required
+          />
+        </div>
+  
+  
+        <button type="submit" [disabled]="!policy.policyHolderName || !policy.policyNumber || !policy.premium">
+          Save Changes
+        </button>
+      </form>
+    </div>
+  </div>
+  
